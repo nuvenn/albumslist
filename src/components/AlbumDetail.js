@@ -5,8 +5,8 @@ import CardSection from './CardSection';
 
 class AlbumDetail extends Component {
     render() {
-        const { title, thumbnail_image, artist } = this.props.album;
-        const { thumbnailStyle, headerContentStyle, leftHeaderStyle } = styles;
+        const { title, thumbnail_image, image, artist } = this.props.album;
+        const { thumbnailStyle, headerContentStyle, leftHeaderStyle, headerTextStyle, imageStyle } = styles;
         return (
             <Card>
                 <CardSection>
@@ -14,9 +14,12 @@ class AlbumDetail extends Component {
                         <Image style={thumbnailStyle} source={{ uri: thumbnail_image }} />
                     </View>
                     <View style={headerContentStyle}>
-                        <Text>{title}</Text>
+                        <Text style={headerTextStyle}>{title}</Text>
                         <Text>{artist}</Text>
                     </View>
+                </CardSection>
+                <CardSection>
+                    <Image style={imageStyle} source={{ uri: image }} />
                 </CardSection>
             </Card>
         );
@@ -28,12 +31,20 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'space-around'
     },
+    headerTextStyle: {
+        fontSize: 18    
+    },
     thumbnailStyle: {
         height: 50,
         width: 50
     },
     leftHeaderStyle: {
         marginRight: 10
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
     }
 };
 
