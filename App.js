@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Header title='Light' />
+        <Header title='liquid' />
         <AlbumList />
       </View>
     );
