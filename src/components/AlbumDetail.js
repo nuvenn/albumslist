@@ -22,7 +22,9 @@ class AlbumDetail extends Component {
                 <CardSection>
                     <Image style={imageStyle} source={{ uri: image }} />
                 </CardSection>
-                <Button />
+                <CardSection>
+                    <Button onPress={() => console.log(title)} />
+                </CardSection>
             </Card>
         );
     }

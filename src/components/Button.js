@@ -22,10 +22,10 @@ const styles = {
     }
 };
 
-const Button = () => {
-    const { buttonStyle, textStyle } = styles;  
+const Button = (props) => {
+    const { buttonStyles, textStyle } = styles;  
     return (
-        <TouchableOpacity onPress={() => console.log('pressed')} style={buttonStyle}>
+        <TouchableOpacity onPress={props.onPress} style={buttonStyles}>
             <Text style={textStyle}>Open</Text>
         </TouchableOpacity>
     );
