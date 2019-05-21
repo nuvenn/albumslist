@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Header from './src/components/Header';
-import AlbumList from './src/components/AlbumList';
+import { Header } from './components/common';
+import LoginForm from './components/LoginForm';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <Header title='liquid' />
-        <AlbumList />
-      </View>
-    );
-  }
+class App extends Component {
+    render() {
+        return (
+            <View>
+                <Header title="Login" />
+                <LoginForm />
+            </View>
+        );
+    }
 }
+
+export default App;
 

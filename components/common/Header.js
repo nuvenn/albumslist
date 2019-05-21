@@ -18,7 +18,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
-        paddingTop: 15,
+        paddingTop: 5,
         elevation: 2,
         position: 'relative'
     },
@@ -28,4 +28,4 @@ const styles = {
     }
 };
 
-export default Header;
+export { Header };
