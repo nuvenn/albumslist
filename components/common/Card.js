@@ -1,15 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
-
-class Card extends Component {
-    render() {
-        return (
-            <View style={styles.containerStyle}>
-                {this.props.children}
-            </View>
-        );
-    }
-}
 
 const styles = {
     containerStyle: {
@@ -27,5 +17,11 @@ const styles = {
         marginTop: 10        
     }
 };
+
+const Card = (props) => (
+    <View style={styles.containerStyle}>
+        {props.children}
+    </View>
+);
 
 export { Card };
